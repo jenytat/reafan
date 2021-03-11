@@ -1,0 +1,1488 @@
+//fonts
+$main-font: 'Open Sans', "Open Sans", sans-serif
+body
+    font-family: $main-font
+    background: #F5F5F5
+    padding-top: 158px
+.open-menu
+    display: none
+    z-index: 5
+.open-menu.active
+    display: block
+    background: rgba(0, 0, 0, 0.7)
+    top: 0
+    left: 0
+    overflow: hidden
+    width: 100%
+    height: 100%
+    position: fixed
+.wrapper
+    margin: 0 auto
+    width: 100%
+    max-width: 1000px
+.header
+    position: fixed
+    width: 100%
+    left: 0
+    top: 0
+    background: #F5F5F5
+    z-index: 15
+.header__top
+    padding: 17px 0
+    border-bottom: 1px solid rgba(0, 80, 100, 0.2)
+    & > .wrapper
+        display: flex
+        justify-content: space-between
+        align-items: center
+.phone
+    display: flex
+    align-items: center
+    text-decoration: none
+    &:hover span:first-child
+        background: #00A74F
+    &:hover span:last-child
+        color: #00A74F
+    & span:first-child
+        width: 25px
+        height: 25px
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #005064
+        margin-right: 7px
+        transition: all .4s ease-in-out
+    & span:last-child
+        font-weight: 600
+        font-size: 20px
+        line-height: 27px
+        color: #005064
+        transition: all .4s ease-in-out
+.header__btn
+    display: flex
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    border-radius: 3px
+    background: #00A74F
+    height: 41px
+    width: 240px
+    font-size: 14px
+    line-height: 19px
+    text-transform: uppercase
+    font-weight: 700
+    color: #FFFFFF
+    transition: all .4s ease-in-out
+    &:hover
+        background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+.header__bottom
+    padding: 18px 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+.header__menu
+    position: absolute
+    top: 100%
+    display: none
+    &.wrapper_opening
+        display: block
+    & ul
+        margin: 0
+        position: 0
+        list-style: none
+        padding: 0
+    & .header__menu_wrap
+        width: 300px
+        background: $color-white
+        padding-bottom: 25px
+        & li
+            border-bottom: 1px solid #E1E1E1
+            & a
+                padding: 25px 21px
+                display: flex
+                text-decoration: none
+                font-weight: 600
+                font-size: 20px
+                line-height: 27px
+                text-transform: uppercase
+                color: #303030
+                transition: all .4s ease-in-out
+                & span
+                    flex-grow: 1
+                    flex-basis: 10%
+                &:hover
+                    background: #005064
+                &:hover span
+                    color: $color-white
+            & svg
+                transition: all .4s ease-in-out
+            &.has-sub__1
+                position: relative
+                &:hover
+                    background: #005064
+                &:hover span
+                    color: $color-white
+                & ul
+                    opacity: 0
+                    visibility: hidden
+                    position: absolute
+                    top: 0
+                    left: 100%
+                    background: $color-white
+                    width: 512px
+                    transition: all .4s ease-in-out
+                    & a
+                        font-size: 16px
+                        line-height: 22px
+                        text-transform: none
+                        padding: 27px 0
+                    & a:hover
+                        color: $color-white
+                &:hover ul
+                    opacity: 1
+                    visibility: visible
+                &:hover path
+                    fill: #FFFFFF
+                &:hover svg
+                    transform: rotate(-180deg)
+.header__menu_btn
+    border-radius: 3px
+    box-sizing: border-box
+    display: flex
+    justify-content: center
+    align-items: center
+    background: #005064
+    margin: 35px auto 0 auto
+    width: 200px
+    height: 30px
+    text-transform: uppercase
+    color: #FFFFFF
+    font-size: 12px
+    line-height: 16px
+    text-decoration: none
+    font-weight: 700
+    transition: all .4s ease-in-out
+    &:hover
+        background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+.hamburger
+    display: flex
+    align-items: center
+    & p
+        margin: 0
+        font-size: 16px
+        line-height: 22px
+        color: #005064
+        font-weight: 600
+    &.is-active span
+        -webkit-transform: rotate(225deg);
+        -ms-transform: rotate(225deg);
+        transform: rotate(225deg);
+        -webkit-transition-delay: 0.12s;
+        -o-transition-delay: 0.12s;
+        transition-delay: 0.12s;
+        -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        -o-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        &::before
+            top: 0;
+            opacity: 0;
+            -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+            -o-transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+            transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+        &::after
+            bottom: 0;
+            -webkit-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+            -webkit-transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: bottom 0.1s ease-out, -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+            -o-transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+.hamburger__wrap
+    width: 29px
+    height: 22px
+    margin-right: 16px
+    cursor: pointer
+    position: relative
+    & span
+        width: 100%
+        height: 3px
+        background: #005064
+        position: absolute
+        top: 50%
+        margin-top: -2px
+        display: block
+        -webkit-transition-property: -webkit-transform;
+        transition-property: -webkit-transform;
+        -o-transition-property: transform;
+        transition-property: transform;
+        transition-property: transform, -webkit-transform;
+        -webkit-transition-duration: 0.15s;
+        -o-transition-duration: 0.15s;
+        transition-duration: 0.15s;
+        -webkit-transition-timing-function: ease;
+        -o-transition-timing-function: ease;
+        transition-timing-function: ease;
+        &::after
+            bottom: -8px
+            content: ""
+            display: block
+            height: 3px
+            width: 100%
+            position: absolute
+            background: #005064
+            -webkit-transition-property: -webkit-transform;
+            transition-property: -webkit-transform;
+            -o-transition-property: transform;
+            transition-property: transform;
+            transition-property: transform, -webkit-transform;
+            -webkit-transition-duration: 0.15s;
+            -o-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+            -webkit-transition-timing-function: ease;
+            -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+            -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+            -o-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+            transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+        &::before
+            content: ""
+            display: block
+            height: 3px
+            width: 100%
+            position: absolute
+            background: #005064
+            top: -8px
+            -webkit-transition-property: -webkit-transform;
+            transition-property: -webkit-transform;
+            -o-transition-property: transform;
+            transition-property: transform;
+            transition-property: transform, -webkit-transform;
+            -webkit-transition-duration: 0.15s;
+            -o-transition-duration: 0.15s;
+            transition-duration: 0.15s;
+            -webkit-transition-timing-function: ease;
+            -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+            -webkit-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+            -o-transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+            transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+.titles
+    display: flex
+    justify-content: center
+    margin-bottom: 41px
+.titles__wrap
+    display: flex
+    align-items: center
+.titles__block
+    border-radius: 3px
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25)
+    background: #005064
+    width: 220px
+    height: 92px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    & span
+        font-size: 28px
+        line-height: 38px
+        text-align: center
+        color: #FFFFFF
+        font-weight: 700
+    &.center
+        width: 250px
+        height: 120px
+        margin-right: -4px
+        margin-left: -4px
+        z-index: 2
+        & img
+            margin-bottom: 13px
+        & span
+            font-size: 18px
+            line-height: 25px
+.info
+    background: url(../images/decor/background.png) 50% 50% no-repeat
+    background-size: 100% auto
+    margin-bottom: 76px
+    & > .wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+.info__text
+    max-width: 570px
+    width: 100%
+    & h1 
+        margin: 0
+        font-size: 32px
+        line-height: 44px
+        font-weight: 600
+        color: #303030
+        padding-bottom: 43px
+    & p
+        margin: 0
+        font-size: 16px
+        line-height: 22px
+        color: #303030
+        padding-bottom: 21px
+    & a 
+        text-decoration: none
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 170px
+        height: 50px
+        background: #005064
+        border-radius: 3px
+        margin-top: 47px
+        text-transform: uppercase
+        font-weight: 600
+        font-size: 14px
+        line-height: 19px
+        color: #FFFFFF
+        transition: all .4s ease-in-out
+        &:hover
+            background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+.info__slider
+    width: 514px
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        top: -23px
+        right: -80px
+        z-index: -1
+        background: url(../images/decor/slide-2.svg) no-repeat
+        background-size: contain
+        width: 300px
+        height: 300px
+    &::after
+        content: ''
+        position: absolute
+        width: 95px
+        height: 95px
+        background: url(../images/decor/slide-1.svg) no-repeat
+        background-size: contain
+        bottom: 100px
+        left: 57px
+.info__slider_wrap
+    & .slick-dots
+        bottom: 25px
+        & li
+            width: 17px
+            height: 17px
+            margin: 0 6px
+            & button
+                width: 100%
+                height: 100%
+                padding: 0
+                border-radius: 50%
+                &::before
+                    width: 100%
+                    height: 100%
+                    border-radius: 50%
+                    content: ''
+                    opacity: 1
+                    background: #005064
+    & .slick-prev, .slick-next
+        width: 11px
+        height: 17px
+        top: auto
+        bottom: 18px
+        z-index: 5
+    & .slick-prev
+        left: calc(100% - 97px)
+        &:hover::before
+            background: url(../images/icon/active-arrow.svg) no-repeat
+            background-size: contain
+            transform: rotate(0deg)
+            top: 0
+            left: 0
+    & .slick-next
+        right: 60px
+        &:hover::before
+            background: url(../images/icon/active-arrow.svg) no-repeat
+            background-size: contain
+            transform: rotate(-180deg)
+            top: 0
+            left: 0
+    & .slick-prev::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: url(../images/icon/arrow-big-nex.svg) no-repeat
+        background-size: contain
+        transform: rotate(-180deg)
+        opacity: 1
+    & .slick-next::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: url(../images/icon/arrow-big-nex.svg) no-repeat
+        background-size: contain
+        opacity: 1
+.slick-dots li.slick-active button:before
+    background: #00A74F
+.slick-counter
+    position: absolute
+    bottom: 25px
+    left: 35px
+    font-size: 18px
+    line-height: 25px
+    font-weight: 700
+    & .current
+        color: #00A74F
+.about
+    margin-bottom: 88px
+    & h2 
+        margin: 0
+        padding-bottom: 57px
+        font-weight: 600
+        text-align: center
+        font-size: 32px
+        line-height: 44px
+        color: #303030
+.about__wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+.about__text
+    max-width: 490px
+    width: 100%
+    & h4
+        margin: 0
+        font-size: 18px
+        line-height: 25px
+        color: #303030
+        padding-bottom: 26px
+        color: #303030
+        font-weight: 700
+    & p 
+        margin: 0
+        font-size: 16px
+        line-height: 22px
+        color: #303030
+        padding-bottom: 20px
+.about__video
+    max-width: 490px
+    width: 100%
+    position: relative
+    & video
+        width: 100%
+    &.paused::before
+        position: absolute
+        content: ''
+        background: url(../images/icon/button.svg) no-repeat
+        background-size: contain
+        width: 50px
+        height: 50px
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        cursor: pointer
+        z-index: 2
+        border-radius: 3px
+.service
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    margin-bottom: 22px
+.service__item
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    box-sizing: border-box
+    padding: 36px 24px
+    width: 235px
+    height: 235px
+    background: #005064
+    border-radius: 3px
+    margin: 0 3px 34px 3px
+    text-decoration: none
+    transition: all .4s ease-in-out
+    &:hover
+        background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+    & img 
+        margin-bottom: 36px
+    & span
+        font-size: 18px
+        line-height: 25px
+        font-weight: 700
+        color: #FFFFFF
+.customer
+    margin-bottom: 56px
+    & h2
+        margin: 0
+        padding-bottom: 30px
+        text-align: center
+        font-size: 28px
+        line-height: 38px
+        font-weight: 700
+        color: #303030
+.customer__wrap
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: center
+    & a
+        width: 320px
+        height: 132px
+        border-radius: 0px 50px
+        text-decoration: none
+        margin-bottom: 10px
+        &:first-child
+            background-image: url(../images/decor/first.png)
+            background-size: cover
+            background-position: 50% 50%
+        &:nth-child(2)
+            background-image: url(../images/decor/process.png)
+            background-size: cover
+            background-position: 50% 50%
+        &:last-child
+            background-image: url(../images/decor/dms.png)
+            background-size: cover
+            background-position: 50% 50%
+        & span
+            display: flex
+            align-items: flex-end
+            box-sizing: border-box
+            padding: 26px 24px
+            background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+            border-radius: 0px 50px
+            opacity: 0.6
+            position: relative
+            width: 100%
+            height: 100%
+            font-size: 18px
+            line-height: 25px
+            font-weight: 700
+            color: $color-white
+            transition: all .4s ease-in-out
+            &:hover
+                opacity: 1
+.news
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-bottom: 57px
+    & h2
+        margin: 0
+        text-align: center
+        padding-bottom: 30px
+        font-size: 28px
+        line-height: 38px
+        color: #303030
+        font-weight: 700
+    & a 
+        text-decoration: none
+        font-size: 16px
+        line-height: 22px
+        font-weight: 600
+        color: #005064
+        transition: all .4s ease-in-out
+        &:hover
+            color: #00A74F
+.news__item
+    width: 100%
+    background: $color-white
+    border: 1px solid #E8E8E8
+    box-sizing: border-box
+    padding: 38px 41px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 25px
+.news__info
+    width: 100%
+    max-width: 447px
+    & span
+        font-size: 12px
+        line-height: 16px
+        color: #303030
+    & a
+        display: block
+        text-decoration: none
+        font-size: 24px
+        line-height: 33px
+        font-weight: 600
+        color: #303030
+        padding: 23px 0 34px 0
+        transition: all .4s ease-in-out
+        &:hover
+            color: #00A74F
+    & p
+        margin: 0
+        font-size: 16px
+        line-height: 22px
+        color: #303030
+.news__image
+    width: 100%
+    max-width: 441px
+    & img
+        width: 100%
+        display: block
+.employees
+    & h2
+        margin: 0
+        text-align: center
+        font-size: 28px
+        line-height: 38px
+        font-weight: 700
+        color: #303030
+        padding-bottom: 30px
+.employees__wrap
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+.employees__item
+    border-radius: 3px
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1)
+    background: #FFFFFF
+    overflow: hidden
+    width: 320px
+    margin: 0 3px 48px 3px
+    & a
+        text-decoration: none
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100%
+        height: 43px
+        background: #005064
+        font-size: 14px
+        line-height: 19px
+        font-weight: 600
+        text-transform: uppercase
+        color: #FFFFFF
+        transition: all .4s ease-in-out
+        &:hover
+            background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+.employees__image
+    width: 100%
+    height: 281px
+    overflow: hidden
+    & img
+        display: block
+        height: 100%
+.employees__text
+    width: 100%
+    box-sizing: border-box
+    padding: 22px 11px 0 11px
+    & h5
+        margin: 0
+        padding-bottom: 15px
+        min-height: 50px
+        text-align: center
+        font-size: 18px
+        line-height: 25px
+        color: #303030
+        font-weight: 700
+    & p
+        margin: 0
+        text-align: center
+        font-size: 16px
+        line-height: 22px
+        color: #303030
+        min-height: 44px
+        padding-bottom: 22px
+.employees__block
+    display: flex
+    justify-content: center
+    align-items: center
+    & p
+        margin: 0
+        font-size: 16px
+        line-height: 22px
+        font-weight: 600
+        &:first-child
+            margin-right: 39px
+            color: #303030
+        &:last-child
+            color: #005064
+.employees__all
+    display: block
+    margin: 0 auto
+    width: 140px
+    text-decoration: none
+    font-weight: 600
+    font-size: 16px
+    line-height: 22px
+    color: #005064
+    transition: all .4s ease-in-out
+    &:hover
+        color: #00A74F
+.footer
+    margin-top: 62px
+.footer__question
+    background: #05435B
+    padding: 27px 0 30px 0
+    & > .wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+    & p 
+        margin: 0
+        text-align: center
+        font-weight: 600
+        font-size: 16px
+        line-height: 22px
+        color: #FFFFFF
+        max-width: 514px
+        padding-bottom: 29px
+    & a
+        text-decoration: none
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 3px
+        box-sizing: border-box
+        border: 2px solid #FFFFFF
+        width: 165px
+        height: 41px
+        font-size: 14px
+        line-height: 19px
+        text-transform: uppercase
+        color: #FFFFFF
+        font-weight: 600
+        transition: all .4s ease-in-out
+        &:hover
+            background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+            border-color: transparent
+.footer__block
+    background: $color-white
+    & > .wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+.footer__info
+    padding: 27px 0 31px 0
+    width: 100%
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+.footer__col
+    max-width: 235px
+    width: 100%
+    & .logo
+        display: block
+        margin-bottom: 25px
+    &:first-child p
+        margin: 0
+        font-size: 12px
+        line-height: 16px
+        color: #303030
+        padding-top: 25px
+    & h4 
+        margin: 0 0 18px 0
+        padding-bottom: 11px
+        border-bottom: 1px solid #E0E0E0
+    & ul
+        margin: 0
+        list-style: none
+        padding: 0
+        & li
+            margin-bottom: 15px
+            &:last-child
+                margin-bottom: 0
+            & a
+                text-decoration: none
+                font-size: 16px
+                line-height: 22px
+                color: #005064
+                transition: all .4s ease-in-out
+                &:hover
+                    color: #00A74F
+.footer__col:last-child
+    & p
+        margin: 0
+        font-size: 16px
+        line-height: 22px
+        color: #303030
+        padding-bottom: 15px
+        & a
+            text-decoration: none
+            font-size: 16px
+            line-height: 22px
+            color: #303030
+            margin-left: 5px
+    & a 
+        text-decoration: none
+        font-size: 16px
+        line-height: 22px
+        color: #005064
+        transition: all .4s ease-in-out
+        &:hover
+            color: #00A74F
+.footer__col:last-child .footer__tel
+    margin-top: 15px
+    display: flex
+    flex-direction: column
+    & a
+        font-weight: 600
+        font-size: 20px
+        line-height: 27px
+    & span
+        font-size: 12px
+        line-height: 16px
+        font-weight: 600
+        color: #005064
+.footer__copyright
+    width: 80%
+    border-top: 1px solid #E0E0E0
+    padding: 25px 0 23px 0
+    & p
+        margin: 0
+        text-align: center
+        font-size: 16px
+        line-height: 22px
+        color: #303030
+.footer__slider
+    padding: 20px 0
+    & .slick-prev, .slick-next
+        z-index: 5
+        width: 15px
+        height: 30px
+    & .slick-next::before
+        opacity: 1
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        background: url(../images/icon/arrow-next.svg) no-repeat
+        background-size: contain
+        top: 0
+        left: 0
+    & .slick-prev::before
+        opacity: 1
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        background: url(../images/icon/arrow-prev.svg) no-repeat
+        background-size: contain
+        top: 0
+        left: 0
+.footer__slide
+    outline: none
+.footer__slide_wrap
+    margin: 0 auto
+    background: $color-white
+    border: 1px solid #E5E5E5
+    box-sizing: border-box
+    border-radius: 3px
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 12px
+    width: 288px
+    height: 121px
+    & img
+        margin-bottom: 13px
+    & p
+        margin: 0
+        font-size: 12px
+        line-height: 16px
+        color: #303030
+        text-align: center
+.breadcrumbs
+    background: $color-white
+    padding: 14px 0
+    & > .wrapper
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    & a
+        text-decoration: none
+        font-size: 14px
+        line-height: 19px
+        color: #005064
+        transition: all .4s ease-in-out
+        &:hover
+            color: #00A74F
+        &.active
+            color: #303030
+            pointer-events: none
+    & img
+        margin: 0 13px
+.title
+    background: $color-white
+    & > .wrapper
+        display: flex
+        align-items: center
+        justify-content: space-between
+    & h1
+        margin: 0
+        font-weight: 600
+        font-size: 32px
+        line-height: 44px
+        color: #000000
+        padding: 28px 0 20px 0
+    & a
+        text-decoration: none
+        font-size: 16px
+        line-height: 22px
+        font-weight: 600
+        color: #005064
+        border-bottom: 1px dashed #005064
+        transition: all .4s ease-in-out
+        &:hover
+            color: #00A74F
+    & button
+        outline: none
+        border: none
+        width: 166px
+        height: 41px
+        border-radius: 3px
+        background: #005064
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: 14px
+        line-height: 19px
+        text-transform: uppercase
+        font-weight: 600
+        color: #FFFFFF
+        transition: all .4s ease-in-out
+        &:hover
+            background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+.form-content
+    background: $color-white
+    display: none
+    & h3
+        margin: 0
+        text-align: center
+        padding-bottom: 42px
+        font-weight: 600
+        font-size: 24px
+        line-height: 33px
+        color: #303030
+.form__wrap
+    max-width: 596px
+    width: 100%
+    margin: 0 auto
+    & input[type="checkbox"]
+        display: none
+        &:checked + label::before
+            border: 1px solid #00A74F
+            background: #00A74F
+        &:checked + label::after
+            content: ''
+            position: absolute
+            background: url(../images/icon/check.svg) no-repeat
+            background-size: contain
+            width: 16px
+            height: 13px
+            left: 2px
+            top: 3px
+    & label[for="check"]
+        padding-left: 33px
+        font-size: 12px
+        line-height: 16px
+        color: #303030
+        display: block
+        position: relative
+        &::before
+            border-radius: 4px
+            content: ''
+            border: 1px solid #E5E5E5
+            box-sizing: border-box
+            background: #F5F5F5
+            width: 20px
+            height: 20px
+            display: block
+            position: absolute
+            left: 0
+        & a
+            text-decoration: none
+            color: #005064
+            transition: all .4s ease-in-out
+            &:hover
+                color: #00A74F
+.input
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    & label
+        font-size: 16px
+        line-height: 22px
+        padding-bottom: 8px
+        color: #303030
+    & input
+        width: 288px
+        height: 45px
+        box-sizing: border-box
+        border-radius: 3px
+        border: 1px solid #E5E5E5
+        background: #F5F5F5
+        padding: 10px 15px
+        outline: none
+.input__col
+    display: flex
+    flex-direction: column
+    margin: 0 3px 24px 3px
+.textarea
+    width: 100%
+    display: flex
+    flex-direction: column
+    margin-bottom: 26px
+    & label
+        font-size: 16px
+        line-height: 22px
+        padding-bottom: 8px
+        color: #303030
+    & textarea
+        background: #F5F5F5
+        border: 1px solid #E5E5E5
+        box-sizing: border-box
+        border-radius: 3px
+        height: 84px
+        width: 100%
+        padding: 10px 15px
+        outline: none
+.form__btn
+    padding: 40px 0 62px 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &.button
+        padding: 0 0 41px 0
+        & .block
+            width: 70%
+    & input[type="submit"]
+        width: 133px
+        height: 41px
+        outline: none
+        background: #005064
+        border-radius: 3px
+        font-size: 14px
+        line-height: 19px
+        font-weight: 600
+        text-transform: uppercase
+        color: #FFFFFF
+        border: none
+        cursor: pointer
+        transition: all .4s ease-in-out
+        &:hover
+            background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+.form__file
+    & input
+        width: 0.1px
+        height: 0.1px
+        opacity: 0
+        overflow: hidden
+        position: absolute
+        z-index: -1
+    & label
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 215px
+        height: 41px
+        border: 2px solid #005064
+        box-sizing: border-box
+        border-radius: 3px
+        transition: all .4s ease-in-out
+        & span
+            transition: all .4s ease-in-out
+            text-transform: uppercase
+            font-weight: 600
+            font-size: 14px
+            line-height: 19px
+            color: #005064
+        & svg
+            margin-right: 10px
+        & path
+            transition: all .4s ease-in-out
+        &:hover
+            background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+            border-color: transparent
+            & span 
+                color: #FFFFFF
+            & path
+                stroke: #FFFFFF
+.work__wrap
+    margin-top: 52px
+    background: $color-white
+    box-sizing: border-box
+    padding: 0 40px
+    border: 1px solid #E5E5E5
+    box-sizing: border-box
+.work__item
+    padding: 38px 0
+    border-bottom: 1px solid #E5E5E5
+    & h3
+        margin: 0
+        font-size: 18px
+        line-height: 25px
+        font-weight: 700
+        color: #000000
+        padding-bottom: 33px
+    & p
+        margin: 0
+        font-size: 16px
+        line-height: 22px
+        color: #000000
+        padding-bottom: 15px
+        &:last-child
+            padding-bottom: 0
+.question
+    margin-top: 50px
+    background: $color-white
+    box-sizing: border-box
+    border: 1px solid #E5E5E5
+    padding: 0 40px
+.question__item
+    padding: 30px 0
+    border-bottom: 1px solid #E5E5E5
+    &:last-child
+        border-bottom: 0
+    & h4 
+        margin: 0
+        font-weight: normal
+        font-size: 16px
+        line-height: 22px
+        color: #005064
+        cursor: pointer
+        transition: all .4s ease-in-out
+        &:hover
+            color: #00A74F
+    & p
+        margin: 0
+        padding-top: 31px
+        font-size: 16px
+        line-height: 22px
+        color: #303030
+        display: none
+.sale
+    margin-top: 50px
+.error
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 50px
+    & h3 
+        margin: 0
+        padding: 71px 0 30px 0
+        font-weight: 600
+        font-size: 32px
+        line-height: 44px
+        color: #303030
+        text-align: center
+    & p
+        max-width: 569px
+        font-size: 16px
+        line-height: 22px
+        color: #303030
+        padding-bottom: 30px
+        text-align: center
+    & a 
+        display: flex
+        align-items: center
+        justify-content: center
+        text-decoration: none
+        width: 228px
+        height: 41px
+        background: #005064
+        border-radius: 3px
+        font-size: 14px
+        line-height: 19px
+        font-weight: 600
+        text-transform: uppercase
+        color: #FFFFFF
+        transition: all .4s ease-in-out
+        &:hover
+            background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+.visa
+    margin-top: 50px
+    & .download
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 166px
+        height: 41px
+        background: #005064
+        border-radius: 3px
+        margin: 23px 0 0 auto
+        font-size: 14px
+        line-height: 19px
+        font-weight: 600
+        color: #FFFFFF
+        text-decoration: none
+        text-transform: uppercase
+        transition: all .4s ease-in-out
+        &:hover
+            background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+.search-block
+    width: 100%
+    position: relative
+    background: #FFFFFF
+    border: 1px solid #E5E5E5
+    box-sizing: border-box
+    height: 41px
+    border-radius: 3px
+    overflow: hidden
+    &::before
+        content: ''
+        position: absolute
+        background: url(../images/icon/loupe.svg) no-repeat
+        background-size: contain
+        top: 12px
+        left: 16px
+        width: 16px
+        height: 16px
+    & form
+        width: 100%
+        height: 100%
+        display: flex
+        & input[type="text"]
+            flex-grow: 1
+            flex-basis: 10%
+            outline: none
+            border: none
+            box-sizing: border-box
+            padding: 10px 44px
+            &::placeholder
+                font-size: 16px
+                line-height: 22px
+                color: #827F80
+        & input[type="submit"]
+            outline: none
+            border: none
+            background: #005064
+            width: 100px
+            height: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            font-size: 14px
+            line-height: 19px
+            font-weight: 600
+            text-transform: uppercase
+            color: #FFFFFF
+            cursor: pointer
+            transition: all .4s ease-in-out
+            &:hover
+                background: linear-gradient(180deg, #00A84F 0%, #004E64 100%)
+.visa__accordion
+    margin-top: 12px
+.visa__title
+    display: flex
+    align-items: center
+    padding: 16px 0
+    cursor: pointer
+    & h3
+        margin: 0
+        font-size: 18px
+        line-height: 25px
+        color: #005064
+        font-weight: 700
+    & img
+        margin-right: 14px
+        transition: all .4s ease-in-out
+        &.active
+            transform: rotate(-45deg)
+.visa__answer
+    display: none
+.table
+    width: 100%
+    box-sizing: border-box
+    border: 1px solid #E5E5E5
+    background: #FFFFFF
+    padding: 0 44px
+.table__row
+    padding: 13px 0
+    border-bottom: 1px solid #E5E5E5
+    display: flex
+    justify-content: space-between
+    &:last-child
+        border-bottom: 0
+    & span
+        font-size: 16px
+        line-height: 22px
+        color: #303030
+.m-menu
+    background: $color-white
+    z-index: 12
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.25)
+    width: 80%;
+    height: 100%
+    min-width: 240px;
+    max-width: 440px;
+    position: fixed;
+    left: auto;
+    right: 0;
+    top: 0
+    display: none
+    flex-direction: column
+    box-sizing: border-box
+    padding: 15px
+    -webkit-transition: -webkit-transform .4s ease;
+    transition: -webkit-transform .4s ease;
+    -o-transition: transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease,-webkit-transform .4s ease;
+    -webkit-transform: translate3d(100%,0,0);
+    transform: translate3d(100%,0,0);
+    &.mm-wrapper_opening
+        -webkit-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+.mm-navbar
+    height: 60px;
+    padding: 0 40px 0 40px;
+    border: none;
+    display: flex
+    align-items: center;
+    justify-content: flex-start;
+.m-logo
+    flex: 0 0 auto
+    & .mm-navbar__title
+        display: block
+        height: 100% 
+        & img
+            height: 100%
+.mm-listview
+    padding: 0 40px 0 20px;
+    list-style: none
+    margin: 0
+    flex: 1 0 auto
+    overflow-y: auto
+.mm-listitem
+    position: relative
+    &::after
+        content: '';
+        border-color: #E1E1E1;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        display: block;
+        position: absolute;
+        left: 20px;
+        right: 0;
+        bottom: 0;
+    &.active a
+        color: #005064
+    & a
+        display: block
+        padding: 12px 10px 12px 20px
+        text-decoration: none
+        font-weight: 800
+        color: #303030
+        font-size: 20px
+        line-height: 27px
+        text-transform: uppercase;
+        transition: all .4s ease-in-out
+        &:hover
+            color: #005064
+    & span
+        display: flex
+        align-items: center
+        justify-content: space-between
+    & svg
+        transition: all .4s ease-in-out
+    & svg.active
+        transform: rotate(90deg)
+    & ul
+        list-style: none
+        padding: 0
+        display: none
+        & li
+            & a 
+                text-transform: none
+                font-size: 16px
+                line-height: 22px
+.mm-navbars_bottom
+    border-top-style: solid;
+    border-top-width: 1px;
+    padding: 12px 0 12px 40px
+@media(max-width: 1200px)
+    .header__menu, .header__menu.wrapper_opening
+        display: none
+    .m-menu
+        display: flex
+        z-index: 20
+    .info__slider
+        width: 320px
+        & .info__slide img 
+            width: 100%
+    .info__slider::before
+        display: none
+    .footer__slider .slick-prev
+        left: 0
+    .footer__slider .slick-next
+        right: 0
+@media(max-width: 991px)
+    .wrapper
+        max-width: 720px
+    .footer__info
+        flex-direction: column
+        align-items: center
+    .footer__col
+        margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
+    .news__item
+        flex-direction: column-reverse
+    .news__image
+        margin-bottom: 15px
+    .news__info a
+        padding: 10px 0
+    .input__col
+        width: 100%
+    .input input
+        width: 100%
+    .titles__wrap
+        flex-direction: column
+    .titles__block.center
+        margin: -4px 0
+    .about__wrap, .info > .wrapper
+        flex-direction: column-reverse
+    .about__text
+        margin-top: 15px
+    .info__text h1
+        text-align: center
+@media (max-width: 576px)
+    body
+        padding-top: 226px
+    .wrapper
+        max-width: 95%
+    .header__top > .wrapper
+        flex-direction: column
+    .header__btn
+        margin: 10px 0
+    .hamburger
+        position: fixed
+        top: 20px
+        left: 10px
+        & p
+            display: none
+    .title 
+        padding: 20px 0
+        & > .wrapper
+            flex-direction: column
+        & h1
+            padding: 0 0 20px 0
+            text-align: center
+    .mm-navbar
+        padding: 0
+    .mm-listview
+        padding: 0
+    .mm-navbar__title
+        width: 100%
+        & img
+            width: 100%
+    .search-block form input[type="text"]
+        width: 70%
+    .error
+        & img
+            width: 100%
+    .form__btn
+        flex-direction: column
+    .form__file
+        margin-bottom: 15px
